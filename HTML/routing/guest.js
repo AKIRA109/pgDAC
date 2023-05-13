@@ -65,15 +65,10 @@ pahune.put('/changeguestname/:gname/:gindex',(req,res)=>{
 pahune.use(express.json())
 pahune.delete('/removeGuest',(req,res)=>{
     //let gname= req.body.guestName
-    let index = req.body.guestNo
-    for (let i = 0; i < guest.length; i++) {
-       if(i==index){
-        guest.pop[index];
-        res.send("Guest Removed")
-       }
-       else{
-        res.send("Invalid Index")
-       }
-        
-    }
+    let index = req.body.guestNo 
+    console.log(index)
+    console.log(typeof(index))
+
+    res.send(`Guest ${guest[index]} removed from List` )
+    guest.splice(index,1);
 })
