@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+// || v.indexOf("@") == 0 || v.indexOf(".") == v.length || v.indexOf("@") == -1 || v.indexOf(".") == -1 || ((v.indexOf("@")-v.indexOf("."))>2)
+  
+        let email1;
+        let password1;
+    function validate(){
+            let v=document.forms["login"]["email"].value;
+            if(v.trim()==""|| v.indexOf("@") == -1 || v.indexOf("@") == -1 ||  ((v.indexOf(".")-v.indexOf("@"))<2)|| v.indexOf("@") == 0 || v.indexOf(".") == 0 || v.charAt(v.length-1)=="@" ||v.charAt(v.length-1)=="."  )
+            {
+                email1=false;
+                alert("Email Must Fullfill the criteria");
+                document.forms["login"]["email"].focus();
+               
+            } 
+            else{                
+                email1=true;               
+            }    
+            
+            let y=document.forms["login"]["password"].value;
+
+            if( y.length < 8 || y.trim()=="")
+            {
+                password1=false;
+                alert("Password Criteria not meet");
+                document.forms["login"]["password"].focus();
+            }   
+            else{
+                password1=true;                
+            }
+            return email1 && password1;
+            
+        }
+    </script>
+</head>
+<body>
+    <form id="login" onsubmit="return validate()" action="homepage.html">
+    <label for="email">Your Email : </label>
+    <input type="text"name="email" id="email" required>
+    
+    <br><br><br>
+    <label for="password">Password : </label>
+    <input type="password" id="password">
+    <br><br><br>
+    <button type="submit">LOGIN</button>
+    <!-- <button type="button" onclick="validate()">LOGIN111</button> -->
+    </form>
+</body>
+</html>

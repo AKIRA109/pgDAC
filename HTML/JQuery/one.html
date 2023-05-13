@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script>
+      $(document).ready(() => { 
+
+        // setInterval(repeat,2000);
+        // function repeat(){     
+        // $("#slide").animate({left:'1100px'},2000);
+        // $("#slide").animate({left:'20px'},2000,()=>$("#slide").animate({left:'1100px'},2000));
+        // }
+        let i = 0;
+        function f1(){
+          i++;
+          if(i==5){return 0};
+          $("#slide").animate({left:'1100px'},4000,f2);
+        }
+        function f2(){
+          $("#slide").animate({left:'20px'},4000,f1);
+        }
+        f1();
+
+        //$("div").animate({left:'500px'},3000);
+        $("#b1").click(() => {
+          $("#d1").text("BOOM");
+        });
+        $("#b2").click(() => $("#img").attr("src", "/Images/images.jpg"));
+        $("#b2").dblclick(() =>
+          $("#img").attr("src", "/Images/raccoon-yes.gif")
+        );
+        $("#go").click(() => {
+          $("#box").fadeIn(2000);
+          $("#box").animate({ left: "550px",height: "150px",width: "150px" });        
+          $("#box").animate({ left:"100px",height: "500px", width: "30px" }, 3000);
+          $("#box").animate({ width: "400px", height: "200px" }, 2000);
+          $('#box').animate({"background-color":"black",width: "200px"},2000)
+          $("#box").animate({ "background-color": "red", width: "200px" }, 800);
+          $("#box").animate({ "background-color": "red", width: "200px" ,opacity:'0.6',height:'500px'}, 800);
+        });
+       
+      });
+    </script>
+    <style>
+      #box {        
+        background-color: #943d20;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        border-radius: 50%;
+      }
+      #slide{
+        text-align: center;
+        
+        position: absolute;       
+       display: inline-block;
+        background-color: orangered;
+        color: black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="Name" id="i1" />
+    <button id="b1">SUBMIT</button>
+    <button id="b2">Change Image</button>
+    <button id="go">Let's Go</button>
+    <div id="d1">1234</div>
+    <img src="/Images/images (2).jpg" alt="" id="img" />
+    <br>
+    <div id="box"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="slide">JAI SHREE RAM</div>
+  </body>
+</html>

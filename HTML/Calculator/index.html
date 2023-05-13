@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="calculator">
+    <div class="heading">
+      <h1>calculator</h1>
+    </div>
+    <div class="container">
+      <div class="input" id="screen1" >
+        <input id="screen" type="text" placeholder="0"/> 
+        <div id="operator"></div>       
+        <div id="screen2"></div>       
+      </div>
+      <div class="buttons">
+     
+      <button class="number" onclick="enterNo(1)">1</button>
+      <button class="number" onclick="enterNo(2)">2</button>
+      <button class="number"onclick="enterNo(3)">3</button>
+      <button class="operator"onclick="enterNo('+')">+</button>
+      <br>
+      <button class="number"onclick="enterNo(4)">4</button>
+      <button class="number"onclick="enterNo(5)">5</button>
+      <button class="number"onclick="enterNo(6)">6</button>
+      <button class="operator"onclick="enterNo('-')">-</button>
+      <br>
+      <button class="number"onclick="enterNo(7)">7</button>
+      <button class="number"onclick="enterNo(8)">8</button>
+      <button class="number"onclick="enterNo(9)">9</button>
+      <button class="operator"onclick="enterNo('x')">x</button>
+      <br>
+      <button class="number"onclick="enterNo(0)">0</button>
+      <button class="operator"onclick="enterNo('/')">/</button>
+      <button class="operator"onclick="enterNo('.')">.</button>
+      <button class="AC"onclick="enterNo('AC')">AC</button>
+      <br>
+      <button class="AC"onclick="cal('cal')">=</button>
+      <button class="AC"onclick="enterNo('%')">%</button>
+      <button class="AC"onclick="enterNo('!')">!</button>
+      </div>
+      
+    </div>
+  </div>  
+  </body>
+</html>

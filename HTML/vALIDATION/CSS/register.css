@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Darumadrop+One&family=Raleway&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #body{
+            background: linear-gradient(to left bottom, #000000, #2e2e2e, #585858, #878787, #b9b9b9, #c0c0c0, #c6c7c8, #cdcecf, #a8abac, #84898a, #626969, #424a49);
+            width: auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+        form{
+            background: transparent;
+            padding: 30px;
+            border:none;
+            margin-top: 20px;
+            /* line-height: 30px; */
+            margin-top: 30px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;           
+        } 
+        form input{
+            background: transparent;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            margin-bottom: 10px;
+        }
+        form h1{
+            font-family: 'Castoro Titling', cursive;
+            text-transform: uppercase;
+        }
+        form label{
+           font-weight:600;
+            font-family: 'Castoro Titling', cursive;
+            text-transform: uppercase;
+        }
+        #register{
+            width: 100%;
+            font-weight: 6  00;
+
+        }
+        
+       
